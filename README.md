@@ -2,6 +2,10 @@
 
 Traphix is a simple Go library for creating colorful terminal graphics using ANSI color codes. It provides functionality to draw shapes, lines, and circles with changing colors, allowing you to create dynamic and visually appealing patterns in the terminal.
 
+<div align="center">
+<img src="./demo.gif" width="200">
+<div>
+
 ## Installation
 
 To use Traphix in your Go project, you can install it with the following command:
