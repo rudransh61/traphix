@@ -14,7 +14,6 @@ To use Traphix in your Go project, you can install it with the following command
 $ go get -u github.com/rudransh61/traphix
 ```
 
-Make sure to replace `yourusername` with your actual GitHub username.
 
 ## Example Usage
 
