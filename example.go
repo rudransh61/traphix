@@ -19,6 +19,7 @@ func main() {
 	for {
 		// Clear the screen for each frame
 		window.ClearScreen()
+		window.Background(0,0,0)
 
 		// Update the ball's position based on velocity
 		ballX += velocityX
