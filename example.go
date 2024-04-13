@@ -26,10 +26,10 @@ func main() {
 		ballY += velocityY
 
 		// Bounce off the walls
-		if ballX <= 0 || ballX >= window.Width-1 {
+		if ballX <= 3 || ballX >= window.Width-5 {
 			velocityX = -velocityX
 		}
-		if ballY <= 0 || ballY >= window.Height-1 {
+		if ballY <= 3 || ballY >= window.Height-5 {
 			velocityY = -velocityY
 		}
 

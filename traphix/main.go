@@ -1,10 +1,10 @@
-// traphix/traphix.go
 package traphix
 
 import (
 	"fmt"
 	"math"
 	"os"
+	"runtime"
 	"os/exec"
 )
 
@@ -56,11 +56,17 @@ func (w *Window) SetPixel(x, y, r, g, b int) {
 
 // ClearScreen clears the terminal screen.
 func (w *Window) ClearScreen() {
-	cmd := exec.Command("clear") // Use "clear" for Unix-like systems, "cls" for Windows
-	cmd.Stdout = os.Stdout
-	cmd.Run()
-}
+    var cmd *exec.Cmd
 
+    if runtime.GOOS == "windows" {
+        cmd = exec.Command("cmd", "/c", "cls") // Use "cls" for Windows
+    } else {
+        cmd = exec.Command("clear") // Use "clear" for Unix-like systems
+    }
+
+    cmd.Stdout = os.Stdout
+    cmd.Run()
+}
 // PrintWindow prints the window with ANSI color codes.
 func (w *Window) PrintWindow() {
 	for _, row := range w.Pixels {
